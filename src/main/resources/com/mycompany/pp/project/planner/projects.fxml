@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.pp.project.planner.Controller">
+   <children>
+      <Label layoutX="279.0" layoutY="28.0" text="PROJECTS" />
+      <Button fx:id="butHome" layoutX="30.0" layoutY="45.0" mnemonicParsing="false" onAction="#switchToHome" text="Home" />
+      <Button fx:id="butGraphs" layoutX="30.0" layoutY="78.0" mnemonicParsing="false" onAction="#switchToGraphs" text="Graphs" />
+      <Button fx:id="butExit" layoutX="30.0" layoutY="337.0" mnemonicParsing="false" onAction="#exitButton" text="Exit" />
+      <Button fx:id="butProjects" layoutX="30.0" layoutY="111.0" mnemonicParsing="false" onAction="#switchToProjects" text="Projects" />
+      <Button fx:id="butPeople" layoutX="30.0" layoutY="143.0" mnemonicParsing="false" onAction="#switchToPeople" text="People" />
+   </children>
+</AnchorPane>

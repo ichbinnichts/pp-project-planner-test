@@ -1,0 +1,10 @@
+.buttom{
+   -fx-background-color: #4CAF50; /* Green */
+  -fx-border: none;
+  -fx-color: white;
+  -fx-padding: 15px 32px;
+  -fx-text-align: center;
+  -fx-text-decoration: none;
+  -fx-display: inline-block;
+  -fx-font-size: 16px;
+}
