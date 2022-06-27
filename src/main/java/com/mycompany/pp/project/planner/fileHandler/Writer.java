@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 public class Writer {
     public void writer(String path, String content){
         try{
-            FileWriter file = new FileWriter(path);
+            FileWriter file = new FileWriter(path, true);
             PrintWriter printWriter = new PrintWriter(file);
             printWriter.println(content);
             printWriter.close();
