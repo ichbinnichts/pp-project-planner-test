@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Reader {
     public String reader(String path){
-        String lineContent = "a";
+        String lineContent = "";
         try{
             FileReader file = new FileReader(path);
             BufferedReader bReader = new BufferedReader(file);

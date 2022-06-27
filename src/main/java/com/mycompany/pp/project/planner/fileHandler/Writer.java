@@ -10,12 +10,6 @@ import java.io.PrintWriter;
 public class Writer {
     public void writer(String path, String content){
         try{
-            FileReader read = new FileReader(path);
-            BufferedReader bReader = new BufferedReader(read);
-            String lineContent = "a";
-            while (lineContent != ""){
-                lineContent = bReader.readLine();
-            }
             FileWriter file = new FileWriter(path);
             PrintWriter printWriter = new PrintWriter(file);
             printWriter.println(content);
