@@ -3,6 +3,8 @@ package com.mycompany.pp.project.planner;
 import java.io.IOException;
 
 import com.mycompany.pp.project.planner.fileHandler.DirectoryMaker;
+import com.mycompany.pp.project.planner.fileHandler.Reader;
+import com.mycompany.pp.project.planner.fileHandler.Writer;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -45,11 +47,15 @@ public class Controller {
         App.setRoot("addProject");
     }
     @FXML
-    private void next1(ActionEvent event){
+    private void next1(ActionEvent event) throws IOException{
         cNumberOfMembers = Integer.parseInt(numberOfMembers.getText());
         cProjectName = projectName.getText();
         projectLabel.setText(cProjectName);
         DirectoryMaker dm = new DirectoryMaker();
         dm.dMaker(cProjectName);
+        Writer writer = new Writer();
+        writer.createFile("./Projects/properties.txt");
+        writer.writer("./Projects/properties.txt", cProjectName);
+        App.setRoot("projects");
     }
 }
