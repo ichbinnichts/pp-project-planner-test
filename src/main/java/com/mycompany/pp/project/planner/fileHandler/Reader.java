@@ -23,4 +23,15 @@ public class Reader {
         }
         return lineContent;
     }
+    public String readerLine(String path){
+        String lineContent = "";
+        try {
+            FileReader file = new FileReader(path);
+            BufferedReader bReader = new BufferedReader(file);
+            lineContent = bReader.readLine();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return lineContent;
+    }
 }

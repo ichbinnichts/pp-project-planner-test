@@ -1,10 +1,24 @@
 package com.mycompany.pp.project.planner;
 
 import java.io.IOException;
+
+import com.mycompany.pp.project.planner.fileHandler.DirectoryMaker;
+
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
+    @FXML
+    private TextField projectName, numberOfMembers;
+    @FXML
+    private String cProjectName;
+    @FXML 
+    private int cNumberOfMembers;
+    @FXML 
+    private Label projectLabel;
 
     @FXML
     private void switchToHome() throws IOException {
@@ -25,5 +39,17 @@ public class Controller {
      @FXML
     private void exitButton() throws IOException {
         Platform.exit();
+    }
+    @FXML
+    private void addProject() throws IOException{
+        App.setRoot("addProject");
+    }
+    @FXML
+    private void next1(ActionEvent event){
+        cNumberOfMembers = Integer.parseInt(numberOfMembers.getText());
+        cProjectName = projectName.getText();
+        projectLabel.setText(cProjectName);
+        DirectoryMaker dm = new DirectoryMaker();
+        dm.dMaker(cProjectName);
     }
 }
